@@ -86,7 +86,7 @@
     </div>
 </div>
 
-<!-- JavaScript for Carousel -->
+<!-- JavaScript Carousel -->
 <script>
     const carousel = document.getElementById('carousel');
     const prevButton = document.getElementById('prev');
