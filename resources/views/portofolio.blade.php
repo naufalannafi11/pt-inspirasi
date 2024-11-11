@@ -3,7 +3,7 @@
         <h1 class="text-xl font-bold text-white">Portofolio</h1>
     </div>
 
-    <div class=" mx-10 grid grid-cols-4 gap-6 px-4 py-8">
+    <div class=" mx-10 grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8">
         <div class="flex items-center justify-center p-4 relative group rounded-lg shadow-md">
             <img src="/img/sim.jpg" alt="Image" class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 flex items-center bg-white bg-opacity-50 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
