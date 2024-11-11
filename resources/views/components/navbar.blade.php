@@ -13,7 +13,7 @@
                         <x-nav-link href="/skema" :active="request()->is('skema')">Skema</x-nav-link>
                         <x-nav-link href="/kegiatan" :active="request()->is('kegiatan')">Jadwal Kegiatan</x-nav-link>
                         <x-nav-link href="/portofolio" :active="request()->is('portofolio')">Portofolio</x-nav-link>
-                        <x-nav-link href="/kontak" :active="request()->is('kontak')">Kontak Kami</x-nav-link>
+                        <x-nav-link href="/contact" :active="request()->is('contact')">Kontak Kami</x-nav-link>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <x-nav-link href="/skema" :active="request()->is('skema')">Skema</x-nav-link>
             <x-nav-link href="/kegiatan" :active="request()->is('kegiatan')">Jadwal Kegiatan</x-nav-link>
             <x-nav-link href="/portofolio" :active="request()->is('portofolio')">Portofolio</x-nav-link>
-            <x-nav-link href="/kontak" :active="request()->is('kontak')">Kontak Kami</x-nav-link>
+            <x-nav-link href="/contact" :active="request()->is('contact')">Kontak Kami</x-nav-link>
         </div>
     </div>
 </nav>

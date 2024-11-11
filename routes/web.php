@@ -3,9 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingScheduleController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/kegiatan', [TrainingScheduleController::class, 'index']);
+
 Route::get('/', [PartnerController::class, 'index']);
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Route::get('/', function () {
 //     return view('home');
@@ -23,6 +27,6 @@ Route::get('/portofolio', function () {
     return view('portofolio');
 });
 
-Route::get('/kontak', function () {
-    return view('kontak');
+Route::get('/contact', function () {
+    return view('contact');
 });

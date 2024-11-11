@@ -3,7 +3,7 @@
         <h1 class="text-xl font-bold text-white">Kontak Kami</h1>
     </div>
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-2xl font-bold mb-6 text-center ">Jadwal Tahunan Pelatihan & Sertifikasi</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center ">Jadwal Tahunan Pelatihan & Sertifikasi BNSP - KEMNAKER - ESDM TAHUN 2023</h1>
 
         <!-- Filter dan Sortir -->
         <div class="bg-white p-4 shadow rounded-md mb-4">
@@ -76,35 +76,67 @@
             filterTable();
         }
 
+        // function filterTable() {
+        //     let nameFilter = document.getElementById('filterName').value.toLowerCase();
+        //     let dateFilter = document.getElementById('filterDate').value.toLowerCase();
+        //     let locationFilter = document.getElementById('filterLocation').value.toLowerCase();
+        //     let table = document.querySelector('tbody');
+        //     let rows = table.getElementsByTagName('tr');
+
+        //     for (let i = 0; i < rows.length; i++) {
+        //         let nameCell = rows[i].getElementsByTagName('td')[1];
+        //         let dateCell = rows[i].getElementsByTagName('td')[2];
+        //         let locationCell = rows[i].getElementsByTagName('td')[3];
+
+        //         if (nameCell && dateCell && locationCell) {
+        //             let nameText = nameCell.textContent.toLowerCase();
+        //             let dateText = dateCell.textContent.toLowerCase();
+        //             let locationText = locationCell.textContent.toLowerCase();
+
+        //             if (
+        //                 nameText.includes(nameFilter) &&
+        //                 dateText.includes(dateFilter) &&
+        //                 locationText.includes(locationFilter)
+        //             ) {
+        //                 rows[i].style.display = '';
+        //             } else {
+        //                 rows[i].style.display = 'none';
+        //             }
+        //         }
+        //     }
+        // }
+
         function filterTable() {
-            let nameFilter = document.getElementById('filterName').value.toLowerCase();
-            let dateFilter = document.getElementById('filterDate').value.toLowerCase();
-            let locationFilter = document.getElementById('filterLocation').value.toLowerCase();
-            let table = document.querySelector('tbody');
-            let rows = table.getElementsByTagName('tr');
+    console.log('Filtering started'); // Debugging line
+    let nameFilter = document.getElementById('filterName').value.toLowerCase();
+    let dateFilter = document.getElementById('filterDate').value.toLowerCase();
+    let locationFilter = document.getElementById('filterLocation').value.toLowerCase();
+    let table = document.querySelector('tbody');
+    let rows = table.getElementsByTagName('tr');
 
-            for (let i = 0; i < rows.length; i++) {
-                let nameCell = rows[i].getElementsByTagName('td')[1];
-                let dateCell = rows[i].getElementsByTagName('td')[2];
-                let locationCell = rows[i].getElementsByTagName('td')[3];
+    for (let i = 0; i < rows.length; i++) {
+        let nameCell = rows[i].getElementsByTagName('td')[1];
+        let dateCell = rows[i].getElementsByTagName('td')[2];
+        let locationCell = rows[i].getElementsByTagName('td')[3];
 
-                if (nameCell && dateCell && locationCell) {
-                    let nameText = nameCell.textContent.toLowerCase();
-                    let dateText = dateCell.textContent.toLowerCase();
-                    let locationText = locationCell.textContent.toLowerCase();
+        if (nameCell && dateCell && locationCell) {
+            let nameText = nameCell.textContent.toLowerCase();
+            let dateText = dateCell.textContent.toLowerCase();
+            let locationText = locationCell.textContent.toLowerCase();
 
-                    if (
-                        nameText.includes(nameFilter) &&
-                        dateText.includes(dateFilter) &&
-                        locationText.includes(locationFilter)
-                    ) {
-                        rows[i].style.display = '';
-                    } else {
-                        rows[i].style.display = 'none';
-                    }
-                }
+            if (
+                nameText.includes(nameFilter) &&
+                dateText.includes(dateFilter) &&
+                locationText.includes(locationFilter)
+            ) {
+                rows[i].style.display = '';
+            } else {
+                rows[i].style.display = 'none';
             }
         }
+    }
+}
+
 
         document.getElementById('filterName').addEventListener('input', filterTable);
         document.getElementById('filterDate').addEventListener('input', filterTable);

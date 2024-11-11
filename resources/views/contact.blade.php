@@ -42,19 +42,59 @@
 </div>
 
 <div class="flex justify-center bg-white py-10">
-        <div class="p-6 bg-white rounded-lg shadow-lg">
-            <form class="space-y-4">
-                <div class="flex space-x-2">
-                    <input type="text" placeholder="Your Name" class="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                    <input type="email" placeholder="Your Email" class="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                </div>
-                <input type="text" placeholder="Subject" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                <textarea placeholder="Message" class="w-full p-3 h-32 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 resize-none" required></textarea>
-                <button type="submit" class="w-full p-3 font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none">
-                    Send Message
-                </button>
-            </form>
-        </div>
+    <div class="p-6 bg-white rounded-lg shadow-lg">
+        <form class="space-y-4" action="{{ route('contact.store') }}" method="POST" autocomplete="off">
+            @csrf
+            <!-- Input Nama -->
+            <div class="flex space-x-2">
+                <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    class="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+                    name="name" 
+                    required
+                >
+                <!-- Input Email -->
+                <input 
+                    type="email" 
+                    placeholder="Your Email" 
+                    class="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+                    name="email" 
+                    required
+                >
+            </div>
+            <!-- Input Subject -->
+            <input 
+                type="text" 
+                placeholder="Subject" 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" 
+                name="subject" 
+                required
+            >
+            <!-- Input Message -->
+            <textarea 
+                placeholder="Message" 
+                class="w-full p-3 h-32 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 resize-none" 
+                name="message" 
+                required
+            ></textarea>
+            <!-- Button Submit -->
+            <button 
+                type="submit" 
+                class="w-full p-3 font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none"
+            >
+                Send Message
+            </button>
+        </form>
+        
+        <!-- Menampilkan Pesan Sukses -->
+        @if(session('success'))
+            <div class="alert alert-success mt-4 p-4 bg-green-100 text-green-800 rounded">
+                {{ session('success') }}
+            </div>
+        @endif
     </div>
+</div>
+
 
 </x-layout>

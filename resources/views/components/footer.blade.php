@@ -16,7 +16,7 @@
                 <li><a href="/skema" class="text-green-500 hover:underline">Skema</a></li>
                 <li><a href="/kegiatan" class="text-green-500 hover:underline">Jadwal Kegiatan</a></li>
                 <li><a href="/portofolio" class="text-green-500 hover:underline">Portfolio</a></li>
-                <li><a href="/kontak" class="text-green-500 hover:underline">Kontak Kami</a></li>
+                <li><a href="/contact" class="text-green-500 hover:underline">Kontak Kami</a></li>
             </ul>
         </div>
 
